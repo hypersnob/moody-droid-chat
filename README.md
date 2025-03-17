@@ -1,36 +1,67 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Moody Droid Chat
 
-## Getting Started
+A fun, interactive chat application featuring moody robot characters from popular science fiction.
 
-First, run the development server:
+## Overview
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Moody Droid Chat is an open-source project that allows users to engage in conversations with simulated personalities of famous fictional robots like Bender, Marvin the Paranoid Android, and HAL 9000. Unlike typical AI chat applications, these robots have fluctuating moods and won't always respond in a helpful manner.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Technical Details
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Framework**: Built with Next.js
+- **AI Integration**: Powered by OpenAI API
+- **Frontend**: React with TypeScript
+- **Styling**: Tailwind CSS
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Prerequisites
 
-## Learn More
+- Node.js (v18.0.0 or higher)
+- npm or yarn
+- OpenAI API key
 
-To learn more about Next.js, take a look at the following resources:
+## Installation
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Clone the repository:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+   ```
+   git clone https://github.com/yourusername/moody-droid-chat.git
+   cd moody-droid-chat
+   ```
 
-## Deploy on Vercel
+2. Install dependencies:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+   ```
+   npm install
+   ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+3. Create a `.env.local` file in the project root and add your OpenAI API key:
+
+   ```
+   OPENAI_API_KEY=your_api_key_here
+   ```
+
+4. Start the development server:
+
+   ```
+   npm run dev
+   ```
+
+5. Open your browser and navigate to `http://localhost:3000`
+
+## Features
+
+- Chat with multiple robot characters with distinct personalities
+- Mood-based responses that change with each interaction
+- Responsive design for mobile and desktop devices
+
+## Disclaimer
+
+This is a non-commercial, open-source project created for entertainment purposes only. All character rights belong to their respective owners. This application is not affiliated with or endorsed by the creators or rights holders of Bender, Marvin the Paranoid Android, HAL 9000, or any other fictional characters featured.
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## License
+
+This project is licensed under the MIT License.
