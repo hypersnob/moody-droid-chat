@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { PERSONAS, getPersonaData } from "@/lib/utils";
-import { Menu, X, Github } from "lucide-react";
+import { Menu, Github, ChevronLeft } from "lucide-react";
 import { useState } from "react";
 import clsx from "clsx";
 import Avatar from "./Avatar";
@@ -21,10 +21,13 @@ export default function Sidebar() {
       {/* Mobile menu button */}
       <button
         onClick={toggleSidebar}
-        className="fixed top-4 left-4 z-50 md:hidden transition-colors"
+        className={clsx(
+          "fixed top-[2.25rem] right-4 z-50 md:hidden transition-colors",
+          isOpen ? "text-base-300" : "text-base-400"
+        )}
         aria-label={isOpen ? "Close menu" : "Open menu"}
       >
-        {isOpen ? <X size={24} /> : <Menu size={24} />}
+        <Menu size={24} />
       </button>
 
       {/* Sidebar */}
@@ -41,10 +44,10 @@ export default function Sidebar() {
             <h2 className="text-xl font-semibold text-base-500">Droids:</h2>
             <button
               onClick={toggleSidebar}
-              className="md:hidden text-gray-500 hover:text-gray-700"
+              className="md:hidden text-base-400"
               aria-label="Close sidebar"
             >
-              <X size={20} />
+              <ChevronLeft size={24} />
             </button>
           </div>
 
