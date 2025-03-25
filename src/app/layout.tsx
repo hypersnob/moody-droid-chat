@@ -6,11 +6,28 @@ import Sidebar from "@/components/Sidebar";
 import Link from "next/link";
 import Image from "next/image";
 import logo from "../../public/img/moody.svg";
+import { Toaster } from "sonner";
+
+const title = "MoodyDroid.chat: Where Robots Have Bad Days Too!";
+const description =
+  "Chat with your favorite sci-fi robots like Bender, Marvin, and HAL 9000. Experience unpredictable, moody AI interactions that are anything but helpful.";
 
 export const metadata: Metadata = {
-  title: "Talk to the moody robots",
-  description: "Iconic robots are alive!",
+  title,
+  description,
   manifest: "/site.webmanifest",
+  metadataBase: new URL("https://moodydroid.chat"),
+  openGraph: {
+    title,
+    description,
+    images: ["/img/opengraph-image.png"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description,
+    images: ["/img/twitter-image.png"],
+  },
 };
 
 export default function RootLayout({
@@ -24,9 +41,10 @@ export default function RootLayout({
       className={clsx(GeistSans.className, "antialiased min-h-screen")}
     >
       <body className="flex flex-col min-h-screen">
-        <header className="flex items-center bg-white px-4 h-24 border-b border-base-100">
+        <Toaster />
+        <header className="flex items-center justify-center md:justify-start bg-white px-4 h-24 border-b border-base-100 relative">
           <h1 className="text-xl font-black tracking-tight text-base-400">
-            <Link href="/" className="flex items-center gap-x-3">
+            <Link href="/" className="flex items-center gap-x-2">
               <Image
                 src={logo}
                 alt="Moody Droid Chat"

@@ -48,7 +48,7 @@ const ChatInput: React.FC<ChatInputProps> = ({
 
       <button
         type="submit"
-        className="flex items-center justify-center h-10 w-10 rounded-full bg-primary disabled:bg-base-200 disabled:cursor-not-allowed text-white"
+        className="flex items-center justify-center h-10 w-10 rounded-full bg-primary disabled:bg-base-200 disabled:cursor-not-allowed text-white shrink-0"
         disabled={isDisabled}
       >
         <ArrowUp size={24} />

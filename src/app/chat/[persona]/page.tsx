@@ -9,6 +9,7 @@ import { getPersonaData, PERSONAS } from "@/lib/utils";
 import { useParams, useRouter } from "next/navigation";
 import SectionHeader from "@/components/SectionHeader";
 import ChatInput from "@/components/ChatInput";
+import { toast } from "sonner";
 
 export default function Chat() {
   const params = useParams();
@@ -35,6 +36,9 @@ export default function Chat() {
     ],
     body: {
       persona,
+    },
+    onError: (err) => {
+      toast.error(err.message);
     },
   };
 
@@ -79,7 +83,7 @@ export default function Chat() {
           </div>
         </div>
       </div>
-      <div className="absolute inset-x-0 bottom-8">
+      <div className="absolute inset-x-0 bottom-8 px-6">
         <div className="w-full max-w-2xl mx-auto">
           <ChatInput
             input={input}

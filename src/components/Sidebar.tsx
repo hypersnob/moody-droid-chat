@@ -13,7 +13,7 @@ export default function Sidebar() {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleSidebar = () => {
-    setIsOpen(!isOpen);
+    setIsOpen((prev) => !prev);
   };
 
   return (
@@ -22,18 +22,18 @@ export default function Sidebar() {
       <button
         onClick={toggleSidebar}
         className={clsx(
-          "fixed top-[2.25rem] right-4 z-50 md:hidden transition-colors",
+          "absolute -top-16 left-4 z-10 md:hidden transition-colors",
           isOpen ? "text-base-300" : "text-base-400"
         )}
         aria-label={isOpen ? "Close menu" : "Open menu"}
       >
-        <Menu size={24} />
+        <Menu size={32} />
       </button>
 
       {/* Sidebar */}
       <aside
         className={clsx(
-          "fixed inset-y-0 left-0 z-40 w-xs bg-white border-r border-base-100 transition-transform duration-300 ease-in-out",
+          "fixed inset-y-0 left-0 z-20 w-xs bg-white border-r border-base-100 transition-transform duration-300 ease-in-out",
           "md:translate-x-0 md:static",
           isOpen ? "translate-x-0" : "-translate-x-full"
         )}
@@ -47,7 +47,7 @@ export default function Sidebar() {
               className="md:hidden text-base-400"
               aria-label="Close sidebar"
             >
-              <ChevronLeft size={24} />
+              <ChevronLeft size={32} />
             </button>
           </div>
 
@@ -87,15 +87,18 @@ export default function Sidebar() {
           {/* Sidebar footer */}
           <div className="flex justify-between items-end p-6">
             <a
-              href="https://github.com/hypersnob/moody-droid-chat"
               target="_blank"
+              href="https://github.com/hypersnob/moody-droid-chat"
               className="text-base-300 hover:text-base-400 transition-colors  "
             >
               <Github size={24} />
             </a>
             <Link
               href="/about"
-              className="text-xs text-base-400 hover:text-base-500 transition-colors"
+              className="text-base-400 hover:text-base-500 transition-colors"
+              onClick={() => {
+                if (isOpen) setIsOpen(false);
+              }}
             >
               About
             </Link>
