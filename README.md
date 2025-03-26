@@ -1,3 +1,5 @@
+[![Moody Droid Chat](./public/img/teaser.png)](https://moodydroid.chat/)
+
 # Moody Droid Chat
 
 A fun, interactive chat application featuring moody robot characters from popular science fiction.
@@ -16,7 +18,7 @@ Moody Droid Chat is an open-source project that allows users to engage in conver
 ## Prerequisites
 
 - Node.js (v18.0.0 or higher)
-- npm or yarn
+- pnpm or yarn or npm
 - OpenAI API key
 
 ## Installation
@@ -24,14 +26,14 @@ Moody Droid Chat is an open-source project that allows users to engage in conver
 1. Clone the repository:
 
    ```
-   git clone https://github.com/yourusername/moody-droid-chat.git
+   git clone https://github.com/hypersnob/moody-droid-chat.git
    cd moody-droid-chat
    ```
 
 2. Install dependencies:
 
    ```
-   npm install
+   pnpm install
    ```
 
 3. Create a `.env.local` file in the project root and add your OpenAI API key:
@@ -43,7 +45,7 @@ Moody Droid Chat is an open-source project that allows users to engage in conver
 4. Start the development server:
 
    ```
-   npm run dev
+   pnpm run dev
    ```
 
 5. Open your browser and navigate to `http://localhost:3000`
@@ -61,7 +63,3 @@ This is a non-commercial, open-source project created for entertainment purposes
 ## Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
-
-## License
-
-This project is licensed under the MIT License.
