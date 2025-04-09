@@ -6,7 +6,7 @@ import { Redis } from "@upstash/redis";
 
 const ratelimit = new Ratelimit({
   redis: Redis.fromEnv(),
-  limiter: Ratelimit.fixedWindow(20, "10m"),
+  limiter: Ratelimit.slidingWindow(10, "15 s"),
 });
 
 // Allow streaming responses up to 30 seconds

@@ -9,29 +9,29 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@ai-sdk/openai": "^1.2.3",
-    "@ai-sdk/react": "^1.1.22",
+    "@ai-sdk/openai": "^1.3.9",
+    "@ai-sdk/react": "^1.2.8",
     "@upstash/ratelimit": "^2.0.5",
-    "@upstash/redis": "^1.34.6",
-    "ai": "^4.1.55",
+    "@upstash/redis": "^1.34.7",
+    "ai": "^4.3.4",
     "clsx": "^2.1.1",
     "geist": "^1.3.1",
     "lucide-react": "^0.482.0",
     "next": "15.2.2",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "sonner": "^2.0.1",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "sonner": "^2.0.3",
     "zod": "^3.24.2"
   },
   "devDependencies": {
-    "@eslint/eslintrc": "^3",
-    "@tailwindcss/postcss": "^4",
-    "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "eslint": "^9",
+    "@eslint/eslintrc": "^3.3.1",
+    "@tailwindcss/postcss": "^4.1.3",
+    "@types/node": "^20.17.30",
+    "@types/react": "^19.1.0",
+    "@types/react-dom": "^19.1.1",
+    "eslint": "^9.24.0",
     "eslint-config-next": "15.2.2",
-    "tailwindcss": "^4",
-    "typescript": "^5"
+    "tailwindcss": "^4.1.3",
+    "typescript": "^5.8.3"
   }
 }
