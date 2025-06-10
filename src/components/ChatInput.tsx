@@ -6,7 +6,7 @@ import { ArrowUp } from "lucide-react";
 interface ChatInputProps {
   input: string;
   setInput: (
-    e: ChangeEvent<HTMLInputElement> | ChangeEvent<HTMLTextAreaElement>
+    e: ChangeEvent<HTMLInputElement> | ChangeEvent<HTMLTextAreaElement>,
   ) => void;
   handleSubmit: (e: React.FormEvent<HTMLFormElement>) => void;
   persona: PersonaId;
@@ -22,7 +22,7 @@ const ChatInput: React.FC<ChatInputProps> = ({
 }) => {
   const isDisabled = useMemo(
     () => disabled || input.length === 0,
-    [disabled, input.length]
+    [disabled, input.length],
   );
 
   const submit = useCallback(
@@ -31,7 +31,7 @@ const ChatInput: React.FC<ChatInputProps> = ({
       e.preventDefault();
       handleSubmit(e);
     },
-    [handleSubmit, isDisabled]
+    [handleSubmit, isDisabled],
   );
 
   return (

@@ -22,7 +22,7 @@ const Message: React.FC<MessageProps> = ({ message, persona, isStreaming }) => {
       <div
         className={clsx(
           "whitespace-pre-wrap px-6 py-4 rounded-[1.5rem] text-base-600",
-          isUser ? "bg-base-200 rounded-br-none" : "bg-white rounded-bl-none"
+          isUser ? "bg-base-200 rounded-br-none" : "bg-white rounded-bl-none",
         )}
       >
         {isStreaming ? (

@@ -3,7 +3,7 @@ import { PersonaId } from "@/types";
 export const PERSONAS: PersonaId[] = ["marvin", "bender", "hal9000"] as const;
 
 export const getPersonaData = (
-  persona: PersonaId
+  persona: PersonaId,
 ): { name: string; fullName: string; initialMessage: string } => {
   const personaNames: Record<
     PersonaId,

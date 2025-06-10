@@ -23,7 +23,7 @@ const Avatar = ({ persona, size = "lg" }: AvatarProps) => (
       {
         "w-10 h-10": size === "sm",
         "w-12 h-12": size === "lg",
-      }
+      },
     )}
   >
     <Image src={imgSrc[persona]} alt={persona} sizes="100%" />

@@ -23,7 +23,7 @@ export default function Sidebar() {
         onClick={toggleSidebar}
         className={clsx(
           "absolute -top-16 left-4 z-10 md:hidden transition-colors",
-          isOpen ? "text-base-300" : "text-base-400"
+          isOpen ? "text-base-300" : "text-base-400",
         )}
         aria-label={isOpen ? "Close menu" : "Open menu"}
       >
@@ -35,7 +35,7 @@ export default function Sidebar() {
         className={clsx(
           "fixed inset-y-0 left-0 z-20 w-xs bg-white border-r border-base-100 transition-transform duration-300 ease-in-out",
           "md:translate-x-0 md:static",
-          isOpen ? "translate-x-0" : "-translate-x-full"
+          isOpen ? "translate-x-0" : "-translate-x-full",
         )}
       >
         <div className="flex flex-col h-full">
@@ -64,7 +64,7 @@ export default function Sidebar() {
                       href={`/chat/${persona}`}
                       className={clsx(
                         "flex items-center px-4 py-6 transition-colors border-b border-base-100",
-                        isActive ? "bg-base-50" : "hover:bg-base-50"
+                        isActive ? "bg-base-50" : "hover:bg-base-50",
                       )}
                       onClick={() => {
                         if (isOpen) setIsOpen(false);
